@@ -1,0 +1,196 @@
+
+.team{
+max-width: 900px;
+margin: 0 auto;
+}
+.team{
+    max-width: 900px;
+    margin: auto;a
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #eaf0f5;
+}
+
+.team {
+    width: 90%;
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 35px;
+    background-color: white;
+    border-radius: 12px;
+}
+
+.team-title {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #243b55;
+}
+
+/* Task 3: Decorative after underline */
+
+.team-title::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: #4776a8;
+    margin: 12px auto 0;
+    border-radius: 5px;
+}
+
+/* Task 1: Flex row, wrapping and gap */
+
+.card-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+}
+
+/* Team cards */
+
+.card {
+    position: relative;
+    flex: 1 1 250px;
+    max-width: 320px;
+    padding: 30px 20px;
+    text-align: center;
+    border: 1px solid #dce4ed;
+    border-radius: 12px;
+    background-color: #f5f8fc;
+    box-shadow: none;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Task 2: Absolute badge inside relative card */
+
+.badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background-color: #4776a8;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+/* Avatar circles */
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    margin: 15px auto 20px;
+    border-radius: 50%;
+    background-color: #c5d5e5;
+    border: 3px solid white;
+    filter: grayscale(100%);
+    transition: filter 0.4s ease, transform 0.4s ease;
+}
+
+.avatar-one {
+    background: linear-gradient(135deg, #d8b4a0, #8da9c4);
+}
+
+.avatar-two {
+    background: linear-gradient(135deg, #b7c9a8, #7e9bb5);
+}
+
+.avatar-three {
+    background: linear-gradient(135deg, #e5c6a7, #a8b8d0);
+}
+
+.card h3 {
+    color: #243b55;
+    margin-bottom: 10px;
+}
+
+.role {
+    color: #64748b;
+    margin-bottom: 0;
+}
+
+/* Task 3: Before symbol */
+
+.role::before {
+    content: "✦ ";
+    color: #4776a8;
+}
+
+/* Task 4: Hover filter and transition effects */
+
+.card:hover {
+    transform: translateY(-8px);
+    filter: drop-shadow(0 8px 10px rgba(0, 0, 0, 0.18));
+}
+
+.card:hover .avatar {
+    filter: grayscale(0%);
+    transform: scale(1.08);
+}
+
+/* Task 6: Alternating card backgrounds */
+
+.card:nth-child(even) {
+    background-color: #edf3f9;
+}
+
+/* Task 5: Button row uses Bootstrap flex utilities */
+
+.actions {
+    margin-top: 40px;
+}
+
+.actions .btn {
+    padding: 10px 25px;
+    border-radius: 5px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.actions .btn:hover {
+    transform: translateY(-3px);
+    filter: brightness(0.9);
+}
+
+/* Mobile responsiveness */
+
+@media (max-width: 576px) {
+    .team {
+        width: 95%;
+        margin: 20px auto;
+        padding: 20px 15px;
+    }
+
+    .card-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 100%;
+        flex: none;
+    }
+
+    .actions {
+        flex-direction: column;
+    }
+
+    .actions .btn {
+        width: 100%;
+    }
+}
+    text-align: center;
+}
+
+.card-row{
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+}
