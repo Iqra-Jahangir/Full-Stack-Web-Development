@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>To-Do List</title>
+<style>
+  body { font-family: Arial, sans-serif; max-width: 500px; margin: 40px auto; padding: 0 15px; }
+  h1 { font-size: 22px; }
+  #taskInput { padding: 6px; width: 70%; }
+  #addBtn { padding: 6px 12px; }
+  #errorMsg { color: red; font-size: 13px; height: 16px; }
+  #taskCount { margin-top: 10px; font-size: 14px; color: #333; }
+  #clearCompletedBtn { margin-top: 8px; }
+  ul#taskList { list-style: none; padding: 0; margin-top: 15px; }
+  ul#taskList li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    border: 1px solid #ccc;
+    margin-bottom: 6px;
+    cursor: pointer;
+  }
+  ul#taskList li.completed span.taskText {
+    text-decoration: line-through;
+    color: gray;
+  }
+  .deleteBtn {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    padding: 4px 8px;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+
+  <h1>Personal To-Do List</h1>
+
+  <input type="text" id="taskInput" placeholder="Enter a task">
+  <button id="addBtn">Add</button>
+  <div id="errorMsg"></div>
+
+  <ul id="taskList"></ul>
+
+  <p id="taskCount">No tasks yet.</p>
+
+  <button id="clearCompletedBtn">Clear Completed</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
